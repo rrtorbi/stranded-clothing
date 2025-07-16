@@ -1,5 +1,5 @@
-import './stranded.scss'
-import CategoryItem from './components/categoryItem/categoryItem';
+
+import Directory from './components/directory/directory-component';
 const App = () => {
 
   const categories = [
@@ -34,11 +34,7 @@ const App = () => {
   return(
     <div className="categories-container">
       {
-        categories.map((category) => {
-          return (
-            <CategoryItem category={category} key={category.id}/>
-          )
-        })
+        <Directory categories={categories} />
       }
     </div>
   )
